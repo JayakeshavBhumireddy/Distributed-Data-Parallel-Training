@@ -1,0 +1,33 @@
+[project]
+name = "ddp-vision"
+version = "0.1.0"
+description = "Production-style multi-GPU image classification training with PyTorch Accelerate."
+requires-python = ">=3.10"
+dependencies = [
+  "accelerate>=0.30.0",
+  "numpy>=1.24.0",
+  "Pillow>=10.0.0",
+  "PyYAML>=6.0.0",
+  "torch>=2.2.0",
+  "torchmetrics>=1.3.0",
+  "torchvision>=0.17.0",
+  "tqdm>=4.66.0",
+  "wandb>=0.16.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
