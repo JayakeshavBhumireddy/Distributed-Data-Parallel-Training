@@ -1,1 +1,39 @@
+# Secrets and local environment
 .env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Training outputs
+runs/
+outputs/
+checkpoints/
+wandb/
+*.pt
+*.pth
+*.ckpt
+
+# Data
+data/
+datasets/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
