@@ -16,7 +16,7 @@ class LocalLogger:
     
     def log(self, metrics: dict[str, Any]) -> None:
         with self.jsonl_path.open("a", encoding="utf-8") as file:
-            file.write(json.dump(metrics, sort_keys=True) + "\n")
+            file.write(json.dumps(metrics, sort_keys=True) + "\n")
         
         write_header = not self.csv_path.exists()
         with self.csv_path.open("a", encoding="utf-8") as file:
