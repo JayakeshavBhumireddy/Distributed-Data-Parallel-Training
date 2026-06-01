@@ -18,6 +18,7 @@ class TrainConfig:
     batch_size: int = 64
     gradient_accumulation_steps: int = 1
     learning_rate: float = 1e-4
+    weight_decay: float = 1e-4
     momentum: float = 0.9
     step_lr_decay: float = 0.1
     lr_step_size: int = 30
