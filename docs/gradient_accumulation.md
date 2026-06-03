@@ -97,7 +97,7 @@ sequenceDiagram
     participant GPU0
     participant GPU1
     participant DDP
-    participant OPT as Optimizer
+    participant Optimizer
 
     GPU0->>GPU0: Mini-batch 1, compute gradients
     GPU1->>GPU1: Mini-batch 1, compute gradients
@@ -105,7 +105,7 @@ sequenceDiagram
     GPU1->>GPU1: Mini-batch 2, add gradients
     GPU0->>DDP: Sync accumulated gradients
     GPU1->>DDP: Sync accumulated gradients
-    DDP->>OPT: One optimizer step
+    DDP->>Optimizer: One optimizer step
 ```
 
 The model update sees:
